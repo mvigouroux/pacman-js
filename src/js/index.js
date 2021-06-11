@@ -13,7 +13,7 @@ import {
     foodWidth, 
     foodHeight, 
     foodColor, 
-    foodsPosition
+    foodsPosition,
 } from './components/constants.js'
 
 const root = document.getElementById('root');
@@ -34,6 +34,8 @@ gameFloor.style.height = `${heightFloor}px`;
 const pacMan = new PacMan(350, 50, wallsInfos, foodsPosition);
 
 // Create Ghost
+let intervalGhostId = null;
+
 function generateGhosts() {
   const ghost1 = new Ghost(350, 350, wallsInfos, pacMan);
   gameFloor.appendChild(ghost1.getGhost());

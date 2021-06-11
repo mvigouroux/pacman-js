@@ -40,7 +40,7 @@ const heightGhost = 40;
 const widthGhost = 35;
 const ghostLimitStraightLine = 100;
 const colorsGhost = ['cyan', '#f5b041', '#e74c3c', '#e8daef'];
-let intervalGhostId = null;
+
 
 // Food 
 const foodWidth = 10;
@@ -160,7 +160,6 @@ export {
     heightGhost,
     widthGhost,
     ghostLimitStraightLine,
-    intervalGhostId,
     colorsGhost,
     foodWidth, 
     foodHeight, 

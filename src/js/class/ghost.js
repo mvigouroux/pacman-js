@@ -1,4 +1,5 @@
 import {Character} from './character.js';
+
 import {
     directions,
     sizePacman,
@@ -8,7 +9,6 @@ import {
     ghostLimitStraightLine,
     colorsGhost
 } from '../components/constants.js';
-
 import {GameOver} from '../components/gameOver.js';
 
 class Ghost extends Character {
@@ -27,45 +27,39 @@ class Ghost extends Character {
       // Take random color
       const i = Math.floor(Math.random() * 4);
       const eyes = document.createElement('div');
-      eyes.style.height = "20px";
+      eyes.setAttribute('class', 'eyes');
       eyes.style.width = `${widthGhost}px`;
-      eyes.style.display = 'flex';
-      eyes.style.justifyContent = 'space-around';
-      eyes.style.alignItems = 'flex-end';
+    
       const eye = document.createElement('div');
-      eye.style.backgroundColor = '#fff';
-      eye.style.height = '15px';
-      eye.style.width = '15px';
-      eye.style.borderRadius = '100%';
-      eye.style.display = 'flex';
-      eye.style.justifyContent = 'flex-start';
-      eye.style.alignItems = 'center';
+      eye.setAttribute('class', 'eye');
+
       const iris = document.createElement('div');
-      iris.style.backgroundColor = 'blue';
-      iris.style.height = '7px';
-      iris.style.width = '7px';
-      iris.style.borderRadius = '100%';
+      iris.setAttribute('class', 'iris');
+
       eye.appendChild(iris);
       eyes.appendChild(eye);
       const eye2 = eye.cloneNode();
       const iris2 = iris.cloneNode();
       eye2.appendChild(iris2);
       eyes.appendChild(eye2);
+
       const tail = document.createElement('div');
+      tail.setAttribute('class','tail');
       tail.style.backgroundRepeat = 'repeat-x';
       tail.style.bottom = '-10px';
       tail.style.height = '10px';
       tail.style.position = 'absolute';
       tail.style.width = '35px';
-      tail.style.background = `linear-gradient(-45deg, transparent 75%, ${colorsGhost[i]} 75%) 0 50%, linear-gradient( 45deg, transparent 75%, ${colorsGhost[i]} 75%) 0 50%`;
+      tail.style.background = 
+      `linear-gradient(-45deg, transparent 75%, ${colorsGhost[i]} 75%) 0 50%, 
+      linear-gradient( 45deg, transparent 75%, ${colorsGhost[i]} 75%) 0 50%`;
       tail.style.backgroundSize = "10px 10px, 10px 10px";
+      
       this.ghost = document.createElement('div');
       this.ghost.setAttribute('class', 'ghost');
       this.ghost.style.height = `${heightGhost}px`;
       this.ghost.style.width = `${widthGhost}px`;
-      this.ghost.style.borderRadius = '30% 30% 0 0'
       this.ghost.style.backgroundColor = colorsGhost[i];
-      this.ghost.style.position = 'absolute';
       this.ghost.style.left = `${this.posX - 25}px`;
       this.ghost.style.bottom = `${this.posY}px`;
       this.ghost.appendChild(eyes);

@@ -1,3 +1,5 @@
+import {widthFloor, heightFloor} from './constants.js'
+
 function GameOver() {
     const card = document.createElement('div');
     card.setAttribute('class', 'card');
@@ -7,6 +9,8 @@ function GameOver() {
     const text = document.createElement('div');
     text.setAttribute('class', 'text');
     text.innerHTML = "Game Over";
+
+    const gameFloor = document.getElementById('gameFloor');
   
     card.appendChild(text);
     gameFloor.appendChild(card);
