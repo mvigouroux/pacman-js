@@ -1,4 +1,4 @@
-function Victory () {
+function Victory() {
     const card = document.createElement('div');
     card.setAttribute('class', 'card');
     card.style.left = `${widthFloor/2 - 150}px`;
