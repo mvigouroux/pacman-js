@@ -1,15 +1,11 @@
 import {widthFloor,heightFloor} from './constants.js'
 
 function displayMenu() {
-    console.log('menu')
-    // const gameFloor = document.getElementById('gameFloor');
-    // console.log(gameFloor);
 
     const nav = document.createElement('nav');
     nav.setAttribute('id', 'menu');
     nav.style.left = `${widthFloor/2 - 150}px`;
     nav.style.top = `${heightFloor/2 - 150}px`;
-  
 
     const btnEasy = document.createElement('button');
     btnEasy.setAttribute('class','btn');

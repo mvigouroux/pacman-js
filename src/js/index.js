@@ -19,30 +19,22 @@ import {
 import { displayMenu } from './components/menu.js'
 
 const root = document.getElementById('root');
-console.log('root');
 
 
 // create elements
 const screen = document.createElement('div');
 screen.setAttribute('id', 'screen');
-console.log('screen');
 
 const gameFloor = document.createElement('div');
 gameFloor.setAttribute('id', 'gameFloor');
 gameFloor.style.width = `${widthFloor}px`;
 gameFloor.style.height = `${heightFloor}px`;
-console.log('gamefloor');
 
 //inject elements on root
 screen.appendChild(gameFloor);
 root.appendChild(screen);
 
 displayMenu();
-
-const menu = document.getElementById('menu');
-const btnMenu = document.querySelectorAll('.btn');
-
-console.log(parseInt(document.getElementById('Easy').value));
 
 document.addEventListener('click', (e)=>{
   let choosenLevel = e.target.id;
@@ -51,7 +43,6 @@ document.addEventListener('click', (e)=>{
   switch (choosenLevel) {
     case 'Easy':
       level = parseInt(document.getElementById('Easy').value);
-      console.log(level);
       menu.style.display = 'block';
       menu.style.display = 'none';
       launchGame(level);
