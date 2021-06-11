@@ -62,7 +62,7 @@ class PacMan extends Character {
                 foodAte.push(f.id);
               }
               if (this.countFoods === maxFood) {
-                Victory;
+                Victory();
               }
             }
           }
@@ -81,7 +81,7 @@ class PacMan extends Character {
                 foodAte.push(f.id);
               }
               if (this.countFoods === maxFood) {
-                Victory;
+                Victory();
               }
             }
           }
