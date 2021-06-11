@@ -11,6 +11,7 @@ function GameOver() {
     text.innerHTML = "Game Over";
 
     const gameFloor = document.getElementById('gameFloor');
+    console.log(gameFloor);
   
     card.appendChild(text);
     gameFloor.appendChild(card);

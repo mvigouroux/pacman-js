@@ -20,17 +20,44 @@
             position : absolute;
           }
 
-          .card {
+          #menu {
             width : 300px;
             height : 300px;
             border : solid 3px #3F51B5;
             display : flex;
+            flex-direction: column;
             justify-content : center;
             align-items : center;
             background-color : black;
             z-index : 999;
             position : absolute;
-          
+            
+            .btn {
+              width : 250px;
+              height : 40px;
+              text-align: center;
+              border : solid 3px #3F51B5;
+              cursor : pointer;
+              color : red;
+              font-weight : bold;
+              font-size : 30px;
+              margin-bottom: 20px;
+              background-color : black;
+            }
+          }
+
+          .card {
+            width : 300px;
+            height : 300px;
+            border : solid 3px #3F51B5;
+            display : flex;
+            flex-direction: column;
+            justify-content : center;
+            align-items : center;
+            background-color : black;
+            z-index : 999;
+            position : absolute;
+            
             .text { 
                 color : red;
                 font-weight : bold;
